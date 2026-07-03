@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import ProductCard from "./components/ProductCard";
-import { products } from "./api/products";
+import { getProducts } from "./api/productsApi";
 import Header from "./components/Header";
 
 function App() {
+  
+  const [products, setProducts] = useState([]);
+
+useEffect(() => {
+  getProducts().then((data) => {
+    setProducts(data);
+  });
+}, []);
+
+
   return (
     <div> 
       <Header/>
