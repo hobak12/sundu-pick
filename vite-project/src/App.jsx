@@ -6,17 +6,24 @@ import Header from "./components/Header";
 function App() {
   
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
 
 useEffect(() => {
-  getProducts().then((data) => {
+  getProducts(search).then((data) => {
     setProducts(data);
   });
-}, []);
+}, [search]);
 
 
   return (
     <div> 
       <Header/>
+      <input
+  type="text"
+  placeholder="상품 검색"
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
     <div
       style={{
         display: "flex",
