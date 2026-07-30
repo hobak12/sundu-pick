@@ -4,7 +4,7 @@ function Header() {
 
 <div className="bg-yellow-50 border-b border-yellow-200">
   <p className="max-w-6xl mx-auto px-6 py-2 text-center text-sm text-gray-600">
-    본 사이트는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받을 수 있습니다.
+파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있습니다.
   </p>
 </div>
 
@@ -21,7 +21,7 @@ function Header() {
       </h1>
 
       <p className="text-xs sm:text-sm text-gray-500">
-        엄마가 직접 고른 추천템
+        엄마가 직접 사용해보고 추천하는 육아템
       </p>
     </div>
   </div>
