@@ -1,57 +1,59 @@
 function ProductCard({ image, name, link }) {
   return (
     <div
-      style={{
-        border: "1px solid #eee",
-        borderRadius: "16px",
-        padding: "15px",
-        width: "220px",
-        backgroundColor: "#fff",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-        textAlign: "center"
-      }}
+      className="
+        bg-white
+        rounded-xl
+        shadow-sm
+        border
+        border-gray-200
+        p-4
+        w-[180px]
+        text-center
+        transition
+        duration-300
+        hover:-translate-y-2
+        hover:shadow-xl
+      "
     >
-      {/* 상품 이미지 */}
       <img
         src={image}
         alt={name}
-        style={{
-          width: "100%",
-          height: "180px",
-          objectFit: "contain",
-          borderRadius: "12px"
-        }}
+        className="
+          w-full
+          h-[150px]
+          object-cover
+          rounded-lg
+        "
       />
 
-      {/* 상품명 */}
       <h3
-        style={{
-          fontSize: "16px",
-          margin: "15px 0 10px",
-          fontWeight: "bold"
-        }}
+        className="
+          font-bold
+          mt-3
+          text-gray-800
+          truncate
+        "
       >
         {name}
       </h3>
 
-      {/* 구매 버튼 */}
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          display: "block",
-          backgroundColor: "#ff6b6b",
-          color: "white",
-          padding: "10px",
-          borderRadius: "8px",
-          textDecoration: "none",
-          fontWeight: "bold",
-          fontSize: "14px"
-        }}
+      <button
+        onClick={() => window.open(link, "_blank")}
+        className="
+          mt-4
+          w-full
+          bg-black
+          text-white
+          py-2
+          rounded-lg
+          text-sm
+          hover:bg-gray-700
+          transition
+        "
       >
-        🛒 구매하기
-      </a>
+        구매하기
+      </button>
     </div>
   );
 }
